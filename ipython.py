@@ -28,3 +28,11 @@ b_list =list(tup)
 b_list[2] = 0
 b_list.insert(0,"happy")
 
+# 创建ndarray
+
+data1 = [6, 7.5, 8, 0, 1]
+arr1 = np.array(data1)
+print(arr1)
+
+
+
