@@ -45,6 +45,56 @@ arr = np.arange(10)
 arr[5]
 # 还可以赋值
 arr[5:8] = 12
+#enumerate 函数
+i = 0
+for value in collection:
+    i += 1
+
+# for i, value in enumerate(collection):
+
+# 索引数据，使用enumerate 映射到dict 上
+some_list = ['foo','bar','baz']
+mapping = {}
+
+for i, v in enumerate(some_list):
+    mapping[v] = i
+
+# sorted 函数
+
+sorted([7,1,2,6,0,3,2])
+# 如果sorted 英文，则会拆开字母进行排序
+
+sorted('horse  race')
+
+# zip 函数
+# 可以将多个列表，元组或其他序列成对组合一个元组列表
+seq1 = ['foo','bar','baz']
+seq2 = ['one','two', 'three']
+
+zipped = zip(seq1,seq2)
+list(zipped)
+# 可以处理任意序列，元素的个数取决于最短序列
+seq3 = [False,True]
+list(zip(seq1,seq2,seq3))
+
+# zip 最常见用法就是迭代多个序列
+
+for i, (a,b) in enumerate(zip(seq1,seq2)):
+    print('{0}:{1},{2}'.format(i,a,b))
+
+#  给出一个被压缩得序列，zip 可以被用来解压序列，也可以当作，
+# 把行的列转换列的列表
+
+pitchers = [('Nolan','Ryan'),('Roger','Clemens'),
+            ('Schilling','Curt')]
+first_names, last_name = zip(*pitchers)
+
+# reversed 函数
+# 可以从后向向前迭代一个序列
+
+list(reversed(range(10)))
+
+
 
 
 
