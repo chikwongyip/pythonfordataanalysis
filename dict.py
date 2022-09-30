@@ -29,6 +29,32 @@ d1.update({'b':"foo",'c':"some"})
 
 # 用序列创建字典
 mapping = {}
-for key, value in zip(key_list,value_list):
-    mapping[key] = value
+# for key, value in zip(key_list,value_list):
+#     mapping[key] = value
 mapping = dict(zip(range(5)),reversed(range(5)))
+# 默认值
+
+# if key in some_dict:
+#     value = some_dict[key]
+# else:
+#     value = default_value
+
+# value = some_dict.get(key, default_value)
+
+words = ['apple','bat','bar','atom','book']
+by_letter = {}
+for word in words:
+    letter = word[0]
+    if letter not in by_letter:
+        by_letter[letter] = [word]
+    else:
+        by_letter[letter].append(word)
+
+for word in words:
+    letter = word[0]
+    by_letter.setdefault(letter,[]).append(word)
+
+# 有效键类型
+# 键通常是不可变得标量类型，可以用hash 函数来检测一个对象是否可哈希
+hash('string')
+
